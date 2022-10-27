@@ -4,9 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>JS Basics - new example</title>
 </head>
 <body>
-    
+
+    <header class="container flex">
+        <h1>JavaScript - Example 2</h1>
+    </header>
+
+    <main>
+
+        <section class="container flex table">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Credit Card Number</th>
+                        <th>Credit Card Type</th>
+                    </tr>
+
+                    <tbody class="customer-data-table">
+                        <td class="customer-delete">
+                            <img src="pictures/delete-symbol.png" alt="X">
+                        </td>
+                    </tbody>
+                </thead>
+            </table>
+        </section>
+
+    </main>
+
+    <section class="container side">
+        <h2 class="header side">Add new customer</h2>
+
+        <label class="label add customer id" for="customer-id">ID:</label>
+        <input class="input add customer id" type="number" id="customer-id" placeholder="ID number here">
+
+        <label class="label add customer first-name" for="customer-first-name">First Name:</label>
+        <input class="input add customer first-name" type="text" id="customer-first-name" placeholder="Customer first name">
+
+        <label class="label add customer last-name" for="customer-last-name">Last Name:</label>
+        <input class="input add customer last-name" type="text" id="customer-last-name" placeholder="Customer last name">
+
+        <label class="label add customer email" for="customer-email">Email:</label>
+        <input class="input add customer email" type="text" id="customer-email" placeholder="Customer Email">
+
+        <label class="label add customer card-number" for="customer-card-number">Credit Card Number:</label>
+        <input class="input add customer card-number" type="number" id="customer-card-number" placeholder="Cust. card number">
+
+        <label class="label add customer card-type" for="customer-card-type">Credit Card Type:</label>
+        <input class="input add customer card-type" type="text" id="customer-card-type" placeholder="Cust. card type">
+
+        <div class="button container flex add customer">
+            <button class="button-add-customer">Add new Customer!</button>
+        </div>
+    </section>
+
+    <footer class="container flex">
+        <p>My new JS example!</p>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./data.js"></script>
+    <script src="./functions.js"></script>
+    <script src="./app.js"></script>
+
 </body>
 </html>

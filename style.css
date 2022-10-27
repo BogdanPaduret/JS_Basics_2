@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    display: grid;
+
+    grid-template-columns: 300px auto;
+
+    grid-template-areas:
+        "header header"
+        "side main"
+        "footer footer";
+}
+
+header,
+main,
+footer,
+.side {
+    padding: 20px;
+    display: block;
+}
+
+.container.flex {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(255, 250, 150);
+    border: 1px solid rgb(255, 200, 100);
+}
+
+main {
+    grid-area: main;
+    padding: 0px 0px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: beige;
+    border: 1px solid rgb(243, 243, 196);
+}
+
+.container.side {
+    grid-area: side;
+
+    align-items: center;
+    justify-items: self-start;
+
+    background-color: beige;
+    border: 1px solid red;
+    padding: 10px;
+
+    display: grid;
+
+    grid-template-columns: 100px 150px;
+    grid-template-rows: repeat(6, 40px);
+
+    gap: 5px;
+
+    grid-template-areas:
+        "header-side header-side"
+        "label-id input-id"
+        "label-fn input-fn"
+        "label-ln input-ln"
+        "label-em input-em"
+        "label-cn input-cn"
+        "label-ct input-ct"
+        "bttn-add bttn-add";
+
+    position: fixed;
+    top: 150px;
+    left: 10px;
+    height: auto;
+}
+
+.header.side {
+    width: 250px;
+    grid-area: header-side;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* label area names */
+.label.id {
+    grid-area: label-id;
+}
+
+.label.first-name {
+    grid-area: label-fn;
+}
+
+.label.last-name {
+    grid-area: label-ln;
+}
+
+.label.email {
+    grid-area: label-em;
+}
+
+.label.card-number {
+    grid-area: label-cn;
+}
+
+.label.card-type {
+    grid-area: label-ct;
+}
+
+/* input area names */
+.input.id {
+    grid-area: input-id;
+}
+
+.input.first-name {
+    grid-area: input-fn;
+}
+
+.input.last-name {
+    grid-area: input-ln;
+}
+
+.input.email {
+    grid-area: input-em;
+}
+
+.input.card-number {
+    grid-area: input-cn;
+}
+
+.input.card-type {
+    grid-area: input-ct;
+}
+
+.input.add.customer {
+    width: 150px;
+    height: 30px;
+}
+
+/* add buton */
+.button.add.customer{
+    grid-area: bttn-add;
+    width: 250px;
+    margin: 15px 0px;
+}
+
+/* table styles */
+main .table table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: middle;
+    table-layout: fixed;
+}
+
+.customer-delete{
+    display: block;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    border: none;
+}
+
+.customer-delete{
+    background-image:url("pictures/delete-symbol-black.png");
+    background-size: 15px;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+.customer-delete:hover{
+    background-image: url("pictures/delete-symbol-red.png");
+    background-size: 30px;
+}
+
+
+/* .table-icon{
+    width: 15px;
+    border: none;
+}
+.table-icon:hover{
+    width: 30px;
+} */
