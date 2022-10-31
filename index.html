@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>JS Basics - new example</title>
 </head>
+
 <body>
 
     <header class="container flex">
@@ -25,48 +27,131 @@
                         <th>Last Name</th>
                         <th>Email</th>
                         <th>Credit Card Number</th>
-                        <!-- <th>Credit Card Type</th> -->
+                        <th>Credit Card Type</th>
                     </tr>
 
-                    <tbody class="customer-data-table">
-                        <td class="customer-delete">
-                            <img src="pictures/delete-symbol.png" alt="X">
-                        </td>
-                    </tbody>
+                <tbody class="customer-data-table">
+                </tbody>
                 </thead>
             </table>
         </section>
 
     </main>
 
-    <section class="container side">
-        <h2 class="header side">Add new customer</h2>
+    <section class="side">
+        <div class="container side">
+            <div class="container add box">
+                <h2 class="header side add">Add new customer</h2>
 
-        <label class="label add customer id" for="customer-id">ID:</label>
-        <input class="input add customer id" type="number" id="customer-id" placeholder="ID number here">
+                <div class="container add items">
+                    <label class="label add customer id" for="customer-id">ID:</label>
+                    <input class="input add customer id" type="number" id="customer-id" placeholder="ID number here">
 
-        <label class="label add customer first-name" for="customer-first-name">First Name:</label>
-        <input class="input add customer first-name" type="text" id="customer-first-name" placeholder="Customer first name">
+                    <label class="label add customer first-name" for="customer-first-name">First Name:</label>
+                    <input class="input add customer first-name" type="text" id="customer-first-name"
+                        placeholder="Customer first name">
 
-        <label class="label add customer last-name" for="customer-last-name">Last Name:</label>
-        <input class="input add customer last-name" type="text" id="customer-last-name" placeholder="Customer last name">
+                    <label class="label add customer last-name" for="customer-last-name">Last Name:</label>
+                    <input class="input add customer last-name" type="text" id="customer-last-name"
+                        placeholder="Customer last name">
 
-        <label class="label add customer email" for="customer-email">Email:</label>
-        <input class="input add customer email" type="text" id="customer-email" placeholder="Customer Email">
+                    <label class="label add customer email" for="customer-email">Email:</label>
+                    <input class="input add customer email" type="text" id="customer-email"
+                        placeholder="Customer Email">
 
-        <label class="label add customer card-number" for="customer-card-number">Credit Card Number:</label>
-        <input class="input add customer card-number" type="number" id="customer-card-number" placeholder="Cust. card number">
+                    <label class="label add customer card-number" for="customer-card-number">Credit Card Number:</label>
+                    <input class="input add customer card-number" type="number" id="customer-card-number"
+                        placeholder="Cust. card number">
 
-        <label class="label add customer card-type" for="customer-card-type">Credit Card Type:</label>
-        <input class="input add customer card-type" type="text" id="customer-card-type" placeholder="Cust. card type">
+                    <label class="label add customer card-type" for="customer-card-type">Credit Card Type:</label>
+                    <input class="input add customer card-type" type="text" id="customer-card-type"
+                        placeholder="Cust. card type">
+                </div>
+                <div class="button container flex add-customer">
+                    <button class="button-add-customer">Add new Customer!</button>
+                </div>
+            </div>
+            <div class="container filter box">
+                <h2 class="header side filter">Filter options</h2>
 
-        <div class="button container flex add customer">
-            <button class="button-add-customer">Add new Customer!</button>
+                <div class="container filter items">
+                    <label class="filter label cardtype" for="filter-cardtype">Card Type:</label>
+                    <select class="filter input cardtype" id="filter-cardtype"></select>
+                </div>
+                <div class="button container flex filter">
+                    <button class="button-reset-filter">Reset filter</button>
+                </div>
+            </div>
+            <div class="container sort box">
+                <h2 class="header side">Sorting options</h2>
+
+                <div class="container sort items">
+                </div>
+            </div>
         </div>
     </section>
 
     <footer class="container flex">
         <p>My new JS example!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non explicabo facere rerum nobis nulla
+            exercitationem, assumenda sint repudiandae, soluta laborum quibusdam? Aut doloribus excepturi esse
+            doloremque recusandae laboriosam provident a?
+            Aperiam, doloremque reiciendis? Quis at cupiditate tenetur ex eaque. Nulla repellat ut dolorum itaque
+            veritatis impedit tempore. Veritatis accusantium illo, fuga expedita unde suscipit debitis dolorum quia, id
+            quaerat reiciendis?
+            Nostrum nisi nihil hic, molestiae eos ipsam! Itaque architecto consequuntur in nulla voluptate vel tenetur
+            ea saepe ipsam quas, maxime ad? Illo provident beatae, vel excepturi cumque magni magnam ex.
+            Sint facilis mollitia vel, nulla numquam ducimus non a consectetur blanditiis tempora iste, nisi velit animi
+            soluta adipisci vitae possimus labore reprehenderit expedita similique accusantium? Est nam dolorem nihil
+            accusamus.
+            Dignissimos ratione sapiente maiores iusto ab numquam nostrum quia deleniti inventore est molestiae nisi
+            animi eligendi porro nulla laborum accusantium, pariatur eaque! Nihil ipsum quia voluptatem provident
+            assumenda voluptas tempora!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium eum facilis quaerat consequuntur
+            dolorem adipisci, provident qui vel explicabo asperiores, id harum, esse obcaecati optio! Sint debitis
+            quidem labore hic.
+            Saepe hic quam suscipit reprehenderit veniam, deleniti autem fugiat commodi, facilis obcaecati vel atque
+            distinctio officiis, minus placeat ullam sunt voluptate non est. Quisquam vitae eius debitis at doloremque
+            maxime.
+            Soluta natus vero facere dolor, quod autem veritatis tempora totam excepturi. Laborum eaque reiciendis
+            soluta perspiciatis labore, necessitatibus veniam harum rem odit, delectus ipsam, quod sequi incidunt
+            voluptas aliquam sint.
+            Nihil molestias quo ratione velit similique accusantium dolor, quae esse tempore iure, modi officia soluta
+            eum? Quisquam, id? Eveniet accusamus nemo atque sint soluta voluptatem et! Enim quaerat corrupti molestiae?
+            Fugiat corporis ullam doloremque soluta dolorum molestiae a fugit nemo deleniti. Aliquam maiores illum eaque
+            qui error beatae maxime autem. Consequatur sit at quae explicabo nulla repellendus quibusdam recusandae
+            modi!
+            Esse, iure animi! Minima ratione atque tempore placeat? Ea doloribus aspernatur a cumque vitae perferendis
+            eaque quas neque architecto ipsa explicabo distinctio dolorem consectetur, labore animi perspiciatis
+            consequatur! Quibusdam, vel!
+            Autem ratione nostrum quidem eaque, esse quaerat? Eos earum explicabo quasi accusamus distinctio. Molestias
+            cumque, pariatur repellat illum aut inventore nesciunt eligendi voluptatibus quae, fuga magnam quibusdam
+            labore? Beatae, odio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nisi veritatis, id magni consequuntur
+            eligendi ducimus modi reprehenderit asperiores quas distinctio! Aspernatur quaerat saepe, totam odio
+            voluptates qui labore nemo.
+            Debitis minima, tempore eaque ullam repudiandae magnam. Sint ipsa consequatur commodi accusamus deleniti
+            blanditiis architecto, hic vel, est sunt ea ducimus eveniet aspernatur error, eos facere. Itaque temporibus
+            accusamus amet?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem hic quaerat eligendi perspiciatis
+            dolor delectus accusamus dignissimos eveniet vel id consectetur saepe ducimus earum, corporis praesentium
+            inventore minus? Earum, voluptas!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis atque architecto nihil delectus iste
+            quibusdam quia odit nobis minima, voluptates laudantium. Placeat possimus quae suscipit quidem facere.
+            Quidem, delectus nisi.
+            Accusantium alias maxime quasi illum eos nihil corporis animi. Magnam ullam fuga obcaecati, veniam, delectus
+            perspiciatis quae vel sapiente enim, beatae impedit voluptatibus aliquid amet quo. Natus minima enim
+            laborum.
+            Voluptas quia consequuntur nemo doloremque quibusdam nesciunt delectus, rem hic voluptatum nulla tempore
+            laboriosam minus ipsa odit repellat, eius reiciendis ipsam quos quisquam cumque, recusandae labore facilis
+            quis impedit? Iusto?
+            Vel dolore laudantium exercitationem distinctio! Eligendi sunt cumque voluptates natus corporis, placeat
+            asperiores, et molestiae error maxime, earum perferendis ducimus nostrum quibusdam incidunt repudiandae quos
+            eum. Aperiam rerum exercitationem explicabo.
+            Totam perspiciatis nesciunt praesentium suscipit similique libero optio, odio corrupti, adipisci quas non
+            ipsa dolores consequuntur doloribus velit odit, sed autem. Voluptatem illum aut natus veniam quis cum
+            recusandae laudantium!</p>
+        <p></p>
     </footer>
 
     <!-- scripts -->
@@ -75,4 +160,5 @@
     <script src="./app.js"></script>
 
 </body>
+
 </html>

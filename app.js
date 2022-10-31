@@ -9,11 +9,55 @@ let customerCardNumber = document.querySelector("#customer-card-number");
 let customerCardType = document.querySelector("#customer-card-type");
 let btnAdd = document.querySelector(".button-add-customer");
 
+let cardTypeFilter = document.querySelector("#filter-cardtype");
+let btnFilter = document.querySelector(".button-reset-filter");
+
 // function calls
-fillCustomerTable(customerContainer);
+reset();
 
 btnAdd.addEventListener("click", () => {
   console.log("am fost apasat!");
-  customerInfo.push(createCustomer());
+  if (btnAdd.textContent == "Add") {
+    addCustomer2Database(createCustomer());
+    reset();
+  } else if (btnAdd.textContent == "Update") {
+    btnAdd.textContent = "Add new Customer!";
+    customerInfo = updateCustomer(customerInfo, customer, createCustomer());
+    reset();
+  }
+});
+
+customerContainer.addEventListener("click", (e) => {
+  let ob = e.target;
+
+  if (ob.tagName == "TD" && ob.className.split(" ")[0] == "customer-delete") {
+    let arr = ob.className.split(" ");
+    console.log("Client with ID " + arr[1] + " will be deleted");
+    customerInfo = deleteCustomer(customerInfo, arr[1]);
+    reset();
+  } else if (ob.tagName == "TD") {
+    customer = getCustomer(
+      customerInfo,
+      ob.parentNode.querySelector(".customer-id").textContent
+    );
+    customerId.value = customer.id;
+    customerFirstName.value = customer.firstName;
+    customerLastName.value = customer.lastName;
+    customerEmail.value = customer.email;
+    customerCardNumber.value = customer.cardNumber;
+    customerCardType.value = customer.cardType;
+    btnAdd.textContent = "Update";
+  }
+});
+
+cardTypeFilter.addEventListener("change", (e) => {
+  console.log(cardTypeFilter.value);
+  customerContainer.innerHTML = createRows(
+    filterCardType(customerInfo, cardTypeFilter.value)
+  );
+  btnFilter.style.visibility = "visible";
+});
+
+btnFilter.addEventListener("click", () => {
   reset();
 });
