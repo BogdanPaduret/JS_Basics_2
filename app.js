@@ -1,5 +1,6 @@
 // variable initialization
 let customerContainer = document.querySelector(".customer-data-table");
+let customerDataHeader=document.querySelector(".customer-data-header");
 
 let customerId = document.querySelector("#customer-id");
 let customerFirstName = document.querySelector("#customer-first-name");
@@ -49,6 +50,17 @@ customerContainer.addEventListener("click", (e) => {
     btnAdd.textContent = "Update";
   }
 });
+
+customerDataHeader.addEventListener("click",(e)=>{
+  let ob=e.target;
+
+  // let content=ob.textContent;
+  // console.log(content);
+
+  if(ob.tagName=="TH" && ob.className!==""){
+    sort(ob.className);
+  }
+})
 
 cardTypeFilter.addEventListener("change", (e) => {
   console.log(cardTypeFilter.value);

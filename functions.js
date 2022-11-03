@@ -10,7 +10,7 @@ function reset() {
   customerCardNumber.value = "";
   customerCardType.value = "";
 
-  fillCustomerTable(customerContainer);
+  fillCustomerTable(customerContainer, customerInfo);
   populateCardType(customerInfo);
 }
 function idInUse(customerList, customerId) {
@@ -58,8 +58,8 @@ function createRows(customerList) {
   console.log("=== Table refreshed ===");
   return string;
 }
-function fillCustomerTable(tableContainer) {
-  tableContainer.innerHTML = createRows(customerInfo);
+function fillCustomerTable(tableContainer, customerList) {
+  tableContainer.innerHTML = createRows(customerList);
 }
 
 // table - add functions
@@ -151,4 +151,18 @@ function filterCardType(customerList, cardType) {
     }
   }
   return newList;
+}
+
+
+// table - sort functions
+function sort(className){
+  let columnName=className.split(" ")[0];
+  // console.log(columnName);
+
+  if(columnName=="sort-id"){
+
+  }
+}
+function sortById(){
+
 }
